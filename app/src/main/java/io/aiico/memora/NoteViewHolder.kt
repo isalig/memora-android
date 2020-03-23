@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class NoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    private val titleTextView: TextView = view.findViewById(R.id.title_text_view)
-    private val contentTextView: TextView = view.findViewById(R.id.content_text_view)
+    private val titleTextView: TextView = view.findViewById(R.id.title_edit_text)
+    private val contentTextView: TextView = view.findViewById(R.id.content_edit_text)
 
     fun bind(note: Note) {
         titleTextView.text = note.title

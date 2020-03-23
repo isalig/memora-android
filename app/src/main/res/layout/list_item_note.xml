@@ -8,7 +8,7 @@
     android:padding="@dimen/outer_spacing_default">
 
     <TextView
-        android:id="@+id/title_text_view"
+        android:id="@+id/title_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -17,10 +17,10 @@
         tools:text="@tools:sample/lorem/random" />
 
     <TextView
-        android:id="@+id/content_text_view"
+        android:id="@+id/content_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="@dimen/inner_spacing_default"
         android:ellipsize="end"
         android:maxLines="2"
         tools:text="@tools:sample/lorem/random" />

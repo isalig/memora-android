@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="outer_spacing_default">18dp</dimen>
+    <dimen name="inner_spacing_default">9dp</dimen>
 </resources>
