@@ -14,11 +14,11 @@ class NoteEditorFragment : Fragment(), EditNoteView {
     private lateinit var contentEditText: EditText
     private lateinit var saveButton: Button
 
-    private lateinit var presenter: EditNotePresenter
+    private lateinit var presenter: NoteEditorPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        presenter = EditNotePresenter(getNoteId())
+        presenter = NoteEditorPresenter(getNoteId())
     }
 
     private fun getNoteId(): String? = arguments?.getString(KEY_NOTE_ID_ARG)

@@ -1,23 +1,32 @@
 package io.aiico.memora
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+
 object NotesRepository {
 
-    private val notes = ArrayList<Note>()
+    private lateinit var dao: NoteDao
     private var consumer: NotesConsumer? = null
 
-    fun insertOrUpdate(sourceNote: Note) {
-        val collisionIndex = notes.indexOfFirst { note -> note.id == sourceNote.id }
-        if (collisionIndex != -1) {
-            notes[collisionIndex] = sourceNote
-        } else {
-            notes.add(sourceNote)
-        }
+    fun init(db: MemoraDb) {
+        dao = db.noteDao
     }
 
-    fun getNote(noteId: String) = notes.firstOrNull { note -> note.id == noteId }
+    fun update(note: Note) {
+        dao.update(note)
+    }
 
-    fun subscribe(consumer: NotesConsumer) {
+    fun insert(note: Note) {
+        dao.insert(note)
+    }
+
+    fun getNote(id: String) = dao.findById(id)
+
+    suspend fun subscribe(consumer: NotesConsumer) {
         this.consumer = consumer
+        val notes = withContext(Dispatchers.IO) {
+            dao.list()
+        }
         this.consumer?.onNotesListChange(notes)
     }
 

@@ -3,6 +3,7 @@
     package="io.aiico.memora">
 
     <application
+        android:name=".MemoraApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
