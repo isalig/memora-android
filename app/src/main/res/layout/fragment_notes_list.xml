@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notes_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
         android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:paddingStart="@dimen/spacing_default"
+        android:paddingTop="@dimen/spacing_default"
+        android:paddingEnd="@dimen/spacing_default"
+        android:paddingBottom="60dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         tools:itemCount="4"
-        tools:listitem="@layout/list_item_note" />
+        tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        tools:listitem="@layout/list_item_note"
+        tools:spanCount="2" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@android:color/white"
+        app:fabCradleMargin="0dp"
+        app:fabCradleRoundedCornerRadius="0dp"
+        app:navigationIcon="@drawable/ic_add_note" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/create_note_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/outer_spacing_default"
-        android:src="@drawable/ic_add" />
+        android:background="@null"
+        android:rotation="45"
+        android:src="@drawable/ic_add_note"
+        app:layout_anchor="@id/bottom_bar"
+        app:layout_anchorGravity="center_horizontal" />
 
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

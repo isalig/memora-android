@@ -3,4 +3,5 @@
     <string name="title">Заголовок</string>
     <string name="content_editor_hint">Запишите что-нибудь…</string>
     <string name="save">Сохранить</string>
+    <string name="note_item_content_hint">…</string>
 </resources>

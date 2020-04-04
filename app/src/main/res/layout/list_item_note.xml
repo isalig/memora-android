@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?selectableItemBackground"
-    android:orientation="vertical"
-    android:padding="@dimen/outer_spacing_default">
+    android:layout_margin="@dimen/spacing_small"
+    android:elevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/corner_radius_default">
 
-    <TextView
-        android:id="@+id/title_edit_text"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        tools:text="@tools:sample/lorem/random" />
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_default">
 
-    <TextView
-        android:id="@+id/content_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/inner_spacing_default"
-        android:ellipsize="end"
-        android:maxLines="2"
-        tools:text="@tools:sample/lorem/random" />
+        <TextView
+            android:id="@+id/title_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:ellipsize="end"
+            android:hint="@string/title"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            tools:text="@tools:sample/lorem/random" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/content_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="@string/note_item_content_hint"
+            android:maxLines="7"
+            android:textSize="@dimen/text_size_default"
+            tools:text="@tools:sample/lorem/random" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

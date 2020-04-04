@@ -1,10 +1,11 @@
-package io.aiico.memora
+package io.aiico.memora.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import io.aiico.memora.domain.Note
 
 @Dao
 interface NoteDao {

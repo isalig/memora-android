@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/outer_spacing_default">
+    android:padding="@dimen/spacing_normal">
 
     <EditText
         android:id="@+id/title_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/inner_spacing_default"
+        android:layout_marginBottom="@dimen/spacing_small"
+        android:background="@null"
         android:hint="@string/title"
         android:imeOptions="actionNext"
         android:importantForAutofill="no"
@@ -35,7 +36,7 @@
         android:id="@+id/save_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/inner_spacing_default"
+        android:layout_marginTop="@dimen/spacing_default"
         android:text="@string/save" />
 
 </LinearLayout>

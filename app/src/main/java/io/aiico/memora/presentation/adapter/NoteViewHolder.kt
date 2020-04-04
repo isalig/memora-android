@@ -1,8 +1,10 @@
-package io.aiico.memora
+package io.aiico.memora.presentation.adapter
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import io.aiico.memora.R
+import io.aiico.memora.domain.Note
 
 class NoteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 

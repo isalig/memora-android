@@ -1,9 +1,13 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="colorPrimary">#004EC3</item>
+        <item name="colorPrimaryDark">#003481</item>
+        <item name="colorSecondary">#F39E20</item>
+        <item name="colorAccent">#F39E20</item>
+        <item name="colorSurface">#EEF4FA</item>
     </style>
 
 </resources>

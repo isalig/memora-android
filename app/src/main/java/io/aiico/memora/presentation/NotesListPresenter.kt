@@ -1,5 +1,7 @@
-package io.aiico.memora
+package io.aiico.memora.presentation
 
+import io.aiico.memora.data.NotesRepository
+import io.aiico.memora.domain.Note
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

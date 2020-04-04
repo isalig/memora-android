@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="outer_spacing_default">18dp</dimen>
-    <dimen name="inner_spacing_default">9dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_default">8dp</dimen>
+    <dimen name="spacing_small">4dp</dimen>
+
+    <dimen name="corner_radius_default">8dp</dimen>
+    <dimen name="card_elevation">12dp</dimen>
+    <dimen name="text_size_normal">20sp</dimen>
+    <dimen name="text_size_default">18sp</dimen>
 </resources>

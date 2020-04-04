@@ -1,4 +1,4 @@
-package io.aiico.memora
+package io.aiico.memora.domain
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

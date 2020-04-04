@@ -1,8 +1,10 @@
-package io.aiico.memora
+package io.aiico.memora.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import io.aiico.memora.R
+import io.aiico.memora.domain.Note
 
 class NotesAdapter(
     private val onNoteClick: (Note) -> Unit
@@ -14,7 +16,13 @@ class NotesAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder =
         with(LayoutInflater.from(parent.context)) {
-            NoteViewHolder(inflate(R.layout.list_item_note, parent, false))
+            NoteViewHolder(
+                inflate(
+                    R.layout.list_item_note,
+                    parent,
+                    false
+                )
+            )
         }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {

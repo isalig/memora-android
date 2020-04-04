@@ -1,5 +1,8 @@
-package io.aiico.memora
+package io.aiico.memora.data
 
+import io.aiico.memora.data.db.MemoraDb
+import io.aiico.memora.domain.Note
+import io.aiico.memora.data.db.NoteDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -23,11 +26,10 @@ object NotesRepository {
     fun getNote(id: String) = dao.findById(id)
 
     suspend fun subscribe(consumer: NotesConsumer) {
-        this.consumer = consumer
-        val notes = withContext(Dispatchers.IO) {
-            dao.list()
+        NotesRepository.consumer = consumer
+        val notes = withContext(Dispatchers.IO) { dao.list()
         }
-        this.consumer?.onNotesListChange(notes)
+        NotesRepository.consumer?.onNotesListChange(notes)
     }
 
     fun unsubscribe() {

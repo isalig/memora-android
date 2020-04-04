@@ -1,4 +1,4 @@
-package io.aiico.memora
+package io.aiico.memora.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import io.aiico.memora.R
+import io.aiico.memora.domain.Note
 
 class NoteEditorFragment : Fragment(), EditNoteView {
 
@@ -63,7 +65,9 @@ class NoteEditorFragment : Fragment(), EditNoteView {
 
         private const val KEY_NOTE_ID_ARG = "note_id"
 
-        fun newInstance(noteId: String?) = NoteEditorFragment().apply { arguments = prepareArgs(noteId) }
+        fun newInstance(noteId: String?) = NoteEditorFragment().apply { arguments =
+            prepareArgs(noteId)
+        }
 
         private fun prepareArgs(noteId: String?) = Bundle().apply { putString(KEY_NOTE_ID_ARG, noteId) }
     }
